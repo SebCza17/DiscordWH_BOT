@@ -82,10 +82,9 @@ client.on('messageCreate', async msg => {
         var User = client.getUser.get(msg.author.username)
 
         msg.reply(User.user_name + ' Current History of Rolls is: ' + client.calcUserRolls.get(User.id).sum) 
-    }else if(msg.content.startsWith('!sumRolls')) {
-        var User = client.getUser.get(msg.author.username)
-
-        msg.reply(User.user_name + ' Current History of Rolls is: ' + client.calcUserRolls.get(User.id).avg) 
+    }else if(msg.content.startsWith('!createCharacter')) {
+        
+        msg.reply('Res: ' + msg.content.split('(')[1].split(',')[0]) 
     }
 })
 
